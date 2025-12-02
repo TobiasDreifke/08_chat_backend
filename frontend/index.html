@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+
+<body onload="init()">
+    Chats
+    <div id="chat-history">
+        <p>loading...</p>
+    </div>
+    <form onsubmit="addChat(); return false;">
+        <input id="first-name" type="text" placeholder="enter first name" required>
+        <input id="last-name" type="text" placeholder="enter last name" required>
+        <br>
+        <input id="message-input" type="text" placeholder="neue Nachricht...">
+        <br>
+        <button type="submit">hinzufügen</button>
+    </form>
+</body>
+
+</html>
