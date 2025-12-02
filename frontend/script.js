@@ -3,6 +3,7 @@ async function init() {
 }
 
 const fetchURL = "http://127.0.0.1:8000/chat_app/";
+const delfetchURL = "http://127.0.0.1:8000/chat_app/detail/";
 
 async function loadChat() {
     const chat = await fetch(fetchURL);
@@ -59,7 +60,7 @@ async function addChat() {
 async function deleteChat(chatId) {
     console.log("deleted ID", chatId);
     try {
-        const response = await fetch(`${fetchURL}${chatId}/`, {
+        const response = await fetch(`${delfetchURL}${chatId}/`, {
             method: "DELETE",
             headers: {
                 "X-CSRFToken": getCookie("csrftoken")
